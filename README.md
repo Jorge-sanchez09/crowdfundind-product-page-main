@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Crowdfunding product page](https://your-live-site-url.com)
+- Live Site URL: [Crowdfunding product page](https://jorge-sanchez09.github.io/crowdfunding-product-page-main/)
 
 ## My process
 

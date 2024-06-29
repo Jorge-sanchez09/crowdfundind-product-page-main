@@ -34,8 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Crowdfunding product page](https://your-live-site-url.com)
 
 ## My process
 
@@ -56,12 +55,12 @@ Users should be able to:
 
 ### What I learned
 
-This project was a good excercise to practice some React concepts and APIs like **Context and Refs**, as well as to remember some Sass aspects such as **partials**, **maps**, etc.
-I also learned how to configure ESlint in a simple way to help me to find code errors more easily.
+This project was a good exercise to practice some React concepts and APIs like **Context and Refs**, as well as to remember some Sass aspects such as **partials**, **maps**, etc.
+I also learned how to configure ESlint in a simple way to help me find code errors more easily.
 
 ### Continued development
 
-I find my React code a little hardcoded, one of the aspects I want to keep developing is my code solving techniques. I also think my scss code can be improved by writting less code and reusing more classes, that's why I like watch other people with more experience solving problems with different approaches than mine.
+I find my React code a little hardcoded, one of the aspects I want to keep developing is my problem-solving techniques techniques. I also think my SCSS code can be improved by writing less code and reusing more classes, that's why I like to watch other people with more experience solving problems with different approaches than mine.
 
 ### Useful resources
 

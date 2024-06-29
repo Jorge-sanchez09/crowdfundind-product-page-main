@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}

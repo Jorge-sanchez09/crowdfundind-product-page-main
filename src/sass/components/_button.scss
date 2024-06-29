@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.button-primary {
+  padding: 1em;
+  border-radius: 3em;
+  color: $var-clr-neutral-100;
+  font-weight: $var-fw-medium;
+  background-color: $var-clr-primary;
+
+  &:disabled {
+    background-color: $var-clr-neutral;
+    pointer-events: none;
+  }
+
+  &:is(:hover, :focus) {
+    background-color: $var-clr-primary-dark;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.pledge-modal {
+  max-width: 730px;
+  padding: 32px 24px;
+
+  @include mix-break-point("lg") {
+    padding: 48px;
+  }
+
+  section {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 26px;
+
+    @include mix-break-point("lg") {
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 1.15rem;
+
+        @include mix-break-point("lg") {
+          font-size: 1.5rem;
+        }
+      }
+
+      button:is(:hover, :focus) svg {
+        opacity: 1;
+      }
+    }
+  }
+}

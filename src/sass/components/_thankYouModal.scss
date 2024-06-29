@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+
+.thank-you-modal {
+  max-width: 540px;
+  margin-block: auto;
+  padding: 32px 24px 38px;
+
+  @include mix-break-point("lg") {
+    padding: 48px 24px;
+  }
+
+  &__content {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 1.75em;
+
+    @include mix-break-point("lg") {
+      gap: 2.75em;
+    }
+
+    img {
+      @include mix-break-point("lg") {
+        width: 90px;
+      }
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 1.5em;
+
+    @include mix-break-point("lg") {
+      gap: 1em;
+    }
+
+    h3 {
+      @include mix-break-point("lg") {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .button-primary {
+    padding: 1.25em 2em;
+  }
+}

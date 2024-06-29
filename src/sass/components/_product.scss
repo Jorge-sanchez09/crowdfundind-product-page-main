@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+
+.product {
+  display: grid;
+  gap: 20px;
+  padding: 0 1.5em 38px;
+  text-align: center;
+
+  @include mix-break-point("sm") {
+    gap: 38px;
+    padding: 0 3em 3em;
+  }
+
+  &__info {
+    display: grid;
+    gap: 1em;
+  }
+
+  img {
+    margin-inline: auto;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-size: 1.25rem;
+
+    @include mix-break-point("sm") {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__buttons-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 200px) auto;
+    justify-content: center;
+    gap: 0.5em;
+
+    @include mix-break-point("sm") {
+      justify-content: space-between;
+    }
+
+    .button-primary {
+      font-size: 1rem;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      border-radius: 2em;
+      background-color: $var-clr-neutral-300;
+      cursor: pointer;
+
+      &:is(:hover, :focus) {
+        circle {
+          fill: $var-clr-neutral;
+        }
+      }
+
+      &:has(input:checked) {
+        circle {
+          fill: $var-clr-primary-dark;
+        }
+
+        path {
+          fill: $var-clr-neutral-100;
+        }
+
+        span {
+          color: $var-clr-primary-dark;
+        }
+      }
+
+      span {
+        display: none;
+        margin-inline: 1em 1.5em;
+        font-weight: $var-fw-bold;
+
+        @include mix-break-point("sm") {
+          display: block;
+        }
+      }
+    }
+
+    input {
+      appearance: none;
+    }
+  }
+}

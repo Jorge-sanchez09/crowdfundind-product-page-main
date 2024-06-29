@@ -1,0 +1,136 @@
+@use "../abstracts" as *;
+
+.rewards-form ol {
+  display: grid;
+  gap: 24px;
+
+  .item {
+    border: 1px solid $var-clr-neutral-350;
+    border-radius: 0.5em;
+    line-height: 1.6;
+
+    &--selected {
+      border: 2px solid $var-clr-primary;
+    }
+
+    &__info {
+      position: relative;
+      display: grid;
+      gap: 1.5em;
+      padding: 32px 22px;
+
+      @include mix-break-point("lg") {
+        gap: 1em;
+      }
+    }
+
+    &__name {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 1em;
+      color: $var-clr-neutral-dark;
+      font-weight: $var-fw-bold;
+      cursor: pointer;
+
+      &:is(:hover, :focus) {
+        color: $var-clr-primary;
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    &__header-text {
+      @include mix-break-point("sm") {
+        display: flex;
+      }
+    }
+
+    &__pledge {
+      color: $var-clr-primary;
+      font-weight: $var-fw-medium;
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      display: grid;
+      place-content: center;
+      width: 24px;
+      aspect-ratio: 1 / 1;
+      border: 2px solid $var-clr-neutral-350;
+      border-radius: 50%;
+
+      &::before {
+        content: "";
+        display: none;
+        width: 12px;
+        aspect-ratio: 1 / 1;
+        background-color: $var-clr-primary;
+        border-radius: 50%;
+      }
+
+      &:checked::before {
+        display: block;
+      }
+    }
+  }
+
+  .stock {
+    display: flex;
+    gap: 8px;
+    font-size: 1rem;
+
+    @include mix-break-point("sm") {
+      position: absolute;
+      top: 32px;
+      right: 22px;
+    }
+
+    span {
+      font-weight: $var-fw-bold;
+      color: $var-clr-neutral-dark;
+    }
+  }
+
+  .selected__pledge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 22px 22px;
+    border-top: 2px solid $var-clr-neutral-350;
+
+    @include mix-break-point("sm") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .buttons-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(50px, 100px));
+      gap: 1em;
+
+      .input-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $var-clr-neutral-350;
+        border-radius: 3em;
+
+        input {
+          display: block;
+          width: 100%;
+          border: none;
+          font-weight: $var-fw-bold;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}

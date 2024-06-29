@@ -1,0 +1,68 @@
+@use "./sass/base";
+@use "./sass/abstracts" as *;
+@use "./sass/components";
+
+body {
+  padding: 2em 1.5em;
+  font-family: "Commissioner", sans-serif;
+  color: $var-clr-neutral;
+  background-color: $var-clr-neutral-200;
+  background-image: url("/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+
+  @include mix-break-point("lg") {
+    padding: 3em 1.5em;
+    background-image: url("/image-hero-desktop.jpg");
+  }
+}
+
+#root {
+  display: grid;
+  gap: 190px;
+  justify-items: center;
+
+  @include mix-break-point("lg") {
+    gap: 240px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  color: $var-clr-neutral-dark;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  @include mix-break-point("sm") {
+    font-size: 1rem;
+  }
+}
+
+main {
+  display: grid;
+  gap: 25px;
+  max-width: 730px;
+
+  & > * {
+    border-radius: 0.5em;
+    border: 1px solid $var-clr-neutral-300;
+    background-color: $var-clr-neutral-100;
+  }
+}
+
+.font-big {
+  font-size: 2rem;
+  font-weight: $var-fw-bold;
+  color: $var-clr-neutral-dark;
+}
+
+.out-of-stock {
+  opacity: 0.5;
+  pointer-events: none;
+}

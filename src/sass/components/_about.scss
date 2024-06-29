@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.about {
+  display: grid;
+  padding: 40px 24px;
+  gap: 28px;
+
+  @include mix-break-point("sm") {
+    gap: 38px;
+    padding: 48px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
